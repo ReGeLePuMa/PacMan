@@ -362,7 +362,6 @@ void loop() {
   } else {
     if (!gameOver) {
       draw();
-      value = analogRead(A0);
       if (checkRange(value, 120, 170)) {
         move(0, -1);
       } else if (checkRange(value, 190, 230)) {
