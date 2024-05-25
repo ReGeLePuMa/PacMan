@@ -337,13 +337,14 @@ bool checkRange(int val, int low, int high) {
 
 void intro() {
   if (!imageError) {
-    TFTscreen.image(logo, 20, 35);
+    TFTscreen.image(logo, 20, 25);
   } else {
     TFTscreen.text("Va saluta", 40, 64);
     TFTscreen.text("Andrei", 64, 90);
   }
   analogWrite(PIN_GREEN, 64);
   playPacmanIntro();
+  TFTscreen.text("Press START", 18, 85);
 }
 
 void loop() {
