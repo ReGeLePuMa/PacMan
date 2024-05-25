@@ -13,9 +13,9 @@
 
 #define WIDTH 128
 #define HEIGHT 60
-#define PACMAN 'C'
-#define FOOD '*'
-#define DEMON '#'
+#define PACMAN "C"
+#define FOOD "*"
+#define ENEMY "#"
 
 #define NOTE_B0 31
 #define NOTE_C1 33
@@ -157,13 +157,13 @@ void setup() {
 
 void initBoard() {
   int8_t i;
-  pacMan = { WIDTH / 2, HEIGHT / 2, true, "C" };
+  pacMan = { WIDTH / 2, HEIGHT / 2, true, PACMAN };
   for (i = 0; i < NR_FOOD; i++) {
     food[i] = {
       rand() % WIDTH,
       rand() % HEIGHT,
       true,
-      "*"
+      FOOD
     };
   }
   for (i = 0; i < NR_ENEMIES; i++) {
@@ -171,7 +171,7 @@ void initBoard() {
       rand() % WIDTH,
       rand() % HEIGHT,
       true,
-      "#"
+      ENEMY
     };
   }
 }
